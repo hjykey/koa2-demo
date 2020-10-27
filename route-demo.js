@@ -1,3 +1,4 @@
+//自定义原生route
 const Koa = require("koa");
 const fs = require("fs");
 const app = new Koa();

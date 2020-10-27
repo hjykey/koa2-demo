@@ -1,10 +1,11 @@
+// 自定义解析get
 const Koa = require("koa");
 const app = new Koa();
 app.use(async (ctx) => {
   let url = ctx.url;
 
   //从request中获取GET请求
-  let request = ctx.request; //原生的为ctx.req，koa里为ctx.request
+  let request = ctx.request; //node原生的为ctx.req，koa里为ctx.request
   let req_query = request.query; //query返回的是格式化好的参数对象
   let req_querystring = request.querystring; //querystring返回的是请求字符串
 
