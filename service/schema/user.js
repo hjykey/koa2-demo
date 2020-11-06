@@ -17,7 +17,7 @@ let ObjectId = Schema.Types.ObjectId //声明Object类型
 //创建我们的用户Schema,用来定义表的模版，实现和MongoDB数据库的映射。model ：具备某张表操作能力的一个集合；entity ：类似记录，由Model创建的实体，也具有影响数据库的操作能力
 const userSchema = new Schema({
   UserId: ObjectId,
-  userName: { unique: true, type: String, required: true },
+  username: { unique: true, type: String, required: true },
   password: String,
   meta: {
     createAt: { type: Date, default: Date.now() },
