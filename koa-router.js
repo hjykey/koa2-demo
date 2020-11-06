@@ -92,6 +92,9 @@ router
 // router.use("/home", home.routes(), home.allowedMethods());
 // router.use("/page", page.routes(), page.allowedMethods());
 
+// 加载路由中间件
+// allowedMethods 处理的业务是当所有路由中间件执行完成之后,若ctx.status为空或者404的时候,丰富response对象的header头
+
 app.use(router.routes()).use(router.allowedMethods())
 app.listen(3000, () => {
   console.log('starting at port 3000')
