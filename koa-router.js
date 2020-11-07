@@ -5,7 +5,7 @@ const Router = require('koa-router')
 const app = new Koa()
 
 let router = new Router({ prefix: '/koa' }) //设置前缀，全局设置，单页设置前缀在use中实现
-// 处理跨域
+// nodejs原生处理跨域
 app.use(async (ctx, next) => {
   // 允许来自所有域名请求
   ctx.set('Access-Control-Allow-Origin', '*')
