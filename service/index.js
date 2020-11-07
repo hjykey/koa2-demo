@@ -1,4 +1,4 @@
-//大型koa开发可以用egg.js框架来做
+//大型koa开发可以用egg.js框架来做,mongodb的UI推荐Robo3
 // npm install mongoose --save
 const Router = require('koa-router')
 const { connect } = require('./init.js') //立即执行函数
