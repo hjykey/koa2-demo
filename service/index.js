@@ -4,11 +4,12 @@ const Router = require('koa-router')
 const { connect } = require('./mginit') //立即执行函数
 
 let user = require('./appApi/userApi.js')
+let goods = require('./appApi/goods')
 
 let router = new Router().use('/user', user.routes())
+router.use('/goods', goods.routes())
 
 const bodyParser = require('koa-bodyparser')
-
 const Koa = require('koa')
 const app = new Koa()
 // npm install --save koa2-cors
