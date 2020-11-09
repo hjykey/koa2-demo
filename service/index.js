@@ -4,7 +4,7 @@ const Router = require('koa-router')
 const { connect } = require('./mginit') //立即执行函数
 
 let user = require('./appApi/userApi.js')
-let goods = require('./appApi/goods')
+let goods = require('./appApi/goods.js')
 
 let router = new Router().use('/user', user.routes())
 router.use('/goods', goods.routes())

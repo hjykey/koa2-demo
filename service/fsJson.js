@@ -3,7 +3,7 @@ const fs = require('fs')
 let pushData = []
 
 fs.readFile(
-  require('path').resolve(__dirname, './appApi/goods.json'),
+  require('path').resolve(__dirname, '../static/goods.json'),
   'utf8',
   function (err, data) {
     if (err) {
@@ -21,7 +21,7 @@ fs.readFile(
       })
       console.log(i)
       fs.writeFile(
-        require('path').resolve(__dirname, './appApi/newGoods.json'),
+        require('path').resolve(__dirname, '../static/newGoods.json'),
         JSON.stringify(pushData),
         function (err) {
           if (err) console.log('写文件操作失败')
