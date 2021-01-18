@@ -6,8 +6,8 @@ const app = new Koa();
 function render(page) {
   return new Promise((resolve, reject) => {
     let pageUrl = `./pages/${page}`;
-    fs.readFile(pageUrl, "binary", (err, data) => {
-      console.log(444);
+    fs.readFile(pageUrl, "utf8", (err, data) => {
+      // console.log(444);
       if (err) {
         reject(err);
       } else {
@@ -42,6 +42,7 @@ async function route(url) {
 
 app.use(async (ctx) => {
   let url = ctx.request.url;
+  console.log(url)
   let html = await route(url);
 
   ctx.body = html;
